@@ -1,5 +1,8 @@
 {
-  "name": "docpad-plugin-yourpluginname-testsite",
+  "name": "docpad-plugin-tinylivereload-testsite",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "tiny-lr": ">=0.0.5"
+  }
 }
