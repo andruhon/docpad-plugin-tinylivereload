@@ -4,7 +4,7 @@ DocPad plugin that adds the ability to do livereload with crhome plugin and with
 
 ## Install
 
-	git clone https://github.com/andruhon/docpad-plugin-tinylivereload.git
+	docpad install tinylivereload
 
 As for the livereload client, you need to install the browser extension:
 http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
