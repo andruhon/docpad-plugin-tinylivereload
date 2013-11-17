@@ -11,35 +11,28 @@ module.exports = (BasePlugin) ->
 		lastGenerateTime: null
 
 		serverAfter: (opts) ->
-			docpad.log('info','tinylivereload serverAfter')
-
 			port = 35729
+			docpad.log('info','Starting TinyLiveReload')
 
 			@lrServer = tinylr()
 
 			@lrServer.removeAllListeners('error')
 			@lrServer.on('error',((err)->
-				console.error('TinyLR error:',err)
+				docpad.log('error','TinyLiveReload error:',err)
 			))
 			@lrServer.listen(port,((err)->
 				console.error(err) if err
-				console.log('LR is listerning on port '+port);
+				docpad.log('info','TinyLiveReload is listerning on port '+port)
 			))
 
 			@lrServer.changed({body:{files:['']}}); #reload page on docpad restart
 
 			@lastGenerateTime = new Date()
 
-			#@lrServer.reload({})
-			#@lrClient.hello();
-
-			# @lrClient = tinylr().client
-			#console.log(@lrServer.clients)
-
 			@
 
 		generateAfter: (opts) ->
-			docpad.log('generate',docpad.generateStarted, @generateStart)
+			return @ if !@lrServer
 			files = []
 			collection = docpad.getDatabase().findAll({
 				mtime: {
@@ -58,4 +51,6 @@ module.exports = (BasePlugin) ->
 			files=[''] if files.length==0
 
 			@lrServer.changed({body:{files:files}});
+			docpad.log('info','changed files are sent')
+
 			@
