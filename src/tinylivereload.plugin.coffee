@@ -7,11 +7,14 @@ module.exports = (BasePlugin) ->
 		# Plugin name
 		name: 'tinylivereload'
 		lrServer: null
-		lrClient: null
 		lastGenerateTime: null
 
+		config:
+			port: 35729
+
 		serverAfter: (opts) ->
-			port = 35729
+			config = @config
+			port = config.port
 			docpad.log('info','Starting TinyLiveReload')
 
 			@lrServer = tinylr()

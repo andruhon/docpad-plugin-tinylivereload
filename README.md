@@ -2,7 +2,7 @@
 
 DocPad plugin that adds the ability to do livereload with crhome plugin and without adding any additional code to your html.
 
-## Install
+## Installation
 
 	docpad install tinylivereload
 
@@ -14,6 +14,27 @@ brower extension)
 or add the livereload script tag manually:
 http://feedback.livereload.com/knowledgebase/articles/86180-how-do-i-add-the-script-tag-manually-
 (and here you can choose whatever port you want)
+
+## Configuration
+
+Currently only `port` option is available:
+
+```coffeescript
+#docpad.coffee
+docpadConfig = {
+
+	[...]
+
+	plugins:
+		tinylivereload:
+			port: 35729 #set your port here
+
+	[...]
+}
+# Export our DocPad Configuration
+module.exports = docpadConfig
+```
+
 
 ## Dependencies
 
