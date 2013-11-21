@@ -1,6 +1,6 @@
 # TinyLiveReload Plugin for [DocPad](http://docpad.org)
 
-DocPad plugin that adds the ability to do livereload with crhome plugin and without adding any additional code to your html.
+DocPad plugin that adds the ability to do livereload with Chrome plugin and without adding any additional code to your html.
 
 ## Installation
 
