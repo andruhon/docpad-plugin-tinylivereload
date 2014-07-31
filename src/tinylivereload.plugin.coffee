@@ -14,6 +14,7 @@ module.exports = (BasePlugin) ->
 
 		serverAfter: (opts) ->
 			config = @config
+			docpad = @docpad
 			port = config.port
 			docpad.log('info','Starting TinyLiveReload')
 
@@ -36,6 +37,7 @@ module.exports = (BasePlugin) ->
 
 		generateAfter: (opts) ->
 			return @ if !@lrServer
+			docpad = @docpad
 			files = []
 			collection = docpad.getDatabase().findAll({
 				mtime: {
