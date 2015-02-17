@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-tinylivereload",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "DocPad plugin that adds the ability to do livereload with crhome plugin and without adding any additional code to your html",
   "homepage": "https://github.com/andruhon/docpad-plugin-tinylivereload",
   "keywords": [
@@ -26,16 +26,13 @@
     "node": ">=0.8"
   },
   "peerDependencies": {
-    "docpad": ">=6.70"
+    "docpad": ">=6.60"
   },
   "dependencies": {
     "tiny-lr": ">=0.0.5"
   },
-  "devDependencies": {
-    "coffee-script": "~1.6.3"
-  },
-  "main": "./src/tinylivereload.plugin.coffee",
+  "main": "./src/tinylivereload.plugin.js",
   "scripts": {
-    "test": "node ./out/tinylivereload.test.js"
+    "test": "node ./src/tinylivereload.test.js"
   }
 }
