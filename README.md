@@ -1,3 +1,6 @@
+# Maintainer needed
+I do not use docpad anymore and therefore can't properly maintain the package. If you feel, that you need it and can improve - please contact me about transferring this package.
+
 # TinyLiveReload Plugin for [DocPad](http://docpad.org)
 
 DocPad plugin that adds the ability to do livereload with Chrome plugin and without adding any additional code to your html.
